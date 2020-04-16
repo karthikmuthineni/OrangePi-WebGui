@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+<div class="navbar">
+  <a href="navigation.html">Home</a>
+  <a href="Wlan.html">Wlan</a>
+  <a href="Modbus.html">Modbus RTU</a>
+  <a href="Modbustcp.html">Modbus TCP</a>
+  <a href="Mqtt.html">MQTT</a>
+  <a href="http://192.168.1.101:1880/ui/#!/1?socketid=FdRMZE5DvYJiiiRWAAAF">I/O Status</a>
+  <a href="Logout.html">Logout</a>
+</div>
+
+<div class="main">
+  <p>..</p>
+</div>
+
+<div style="position: relative">
+<p style="position: fixed; bottom: 0; width:100%; text-align: center"> Designed by: NECTEC </p>
+</div>
+
+
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+
+<body>
+ <link href="site.css" rel="stylesheet">
+ <h1>Welcome to Home Page</h1>
+ <h2>Main Ingredients:</h2>
+
+<button class="collapsible">Wireless LAN (Wlan) Setup</button>
+<div class="content">
+  <p>Wifi settings for the local device can be configured in this page. This page consist of WiFi Scan button, that scans and displays the near-by wifi networks. User can connect to the desired wifi network by entering SSID and password details.</p>
+</div>
+<button class="collapsible">Modbus Setup</button>
+<div class="content">
+  <p>Modbus TCP settings for the local device can be configured in this page. This page provides Modbus Read as well as Modbus Write options to read/write data to the end-device. User can read/write data to four function coils registers. Address, number of registers to be used need to be specified depending on the end-device</p>
+</div>
+<button class="collapsible">MQTT Setup</button>
+<div class="content">
+  <p>Mqtt broker settings can be configured in this page. User can connect to the public Mqtt brokers by entering Host, Port, ClientId, Username, and Password details.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>

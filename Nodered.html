@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>Modbus Page</title>
+<link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+
+<div class="navbar">
+  <a href="navigation.html">Home</a>
+  <a href="Wlan.html">Wlan</a>
+  <a href="Modbus.html">Modbus RTU</a>
+  <a href="Modbustcp.html">Modbus TCP</a>
+  <a href="Mqtt.html">MQTT</a>
+  <a href="http://192.168.1.101:1880/ui/#!/1?socketid=FdRMZE5DvYJiiiRWAAAF">I/O Status</a>
+  <a href="Logout.html">Logout</a>
+</div>
+
+<div class="main">
+  <p>..</p>
+</div>
+
+<div style="position: relative">
+<p style="position: fixed; bottom: 0; width:100%; text-align: center"> Designed by: NECTEC </p>
+</div>
+
+
+ <link href="site.css" rel="stylesheet">
+ <h1>Welcome to Modbus RTU Setup Page</h1>
+
+<style>
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+button:hover {
+  opacity: 0.8;
+}form {border: 3px solid #f1f1f1;}
+
+input[type=text], option[value=select] {
+  width: 20%;
+  padding: 2px 2px;
+  margin: 2px 2;
+  display: inline-block;
+  border: 2px solid #ccc;
+}
+</style>
+
+<center>
+<div class="btn-group" style="width:50%">
+<button class="tablink" style="width:50%" onclick="openPage('Modbus RTU Read', this)" id="defaultOpen">Modbus RTU Read</button>
+<button class="tablink" style="width:50%" onclick="openPage('Modbus RTU Write', this)">Modbus RTU Write</button>
+</div>
+</center>
+
+<div id="Modbus RTU Read" class="tabcontent">
+  <center>
+  <h3>Modbus RTU Read Properties</h3>
+  <form action="test.php" method="post" enctype="multipart/form-data" id = "myForm">
+  <br>
+  <label><b>Unit - ID:</b></label>
+  <label><input type="text" name="UnitID" placeholder="Enter ID of Device"></label>
+  <br>
+  <br>
+  <br>
+  <b>Address:</b>
+  <input type="text" name="Address" placeholder="Enter Register Address">
+  <br>
+  <br>
+  <br>
+  <b>Quantity:</b>
+  <input type="text" name="Quantity" placeholder="Enter No: of Registers">
+  <br>
+  <br>
+  <br>
+<!--  <b>FunCode:</b> -->
+<!--  <input type="text" name="FunctionCode" placeholder="Enter Function Code"> -->
+  <label for="FunCode"><b>Function Code:</b></label>
+  <select name="FC">
+  <option value="Select">Choose FC</option>
+  <option value="1"><b>FC1: Read Coil Status</b></option>
+  <option value="2"><b>FC2: Read Input Status</b></option>
+  <option value="3"><b>FC3: Read Holding Registers</b></option>
+  <option value="4"><b>FC4: Read Input Registers</b></option>
+  </select>
+  <br>
+  <br>
+  <br>
+<button type="Submit" button id="run_modbus" name="Connect">SUBMIT</button>
+<p id="demo"></p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$('#run_modbus').on('click', function() {
+    $.ajax({
+        url : 'test.php'
+    }).done(function(data) {
+        console.log(data);
+        alert(data);
+    });
+});
+</script>
+</form>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myForm").elements[0].value;
+  window.value = x;
+  document.getElementById("demo").innerHTML = x;
+  var y = document.getElementById("myForm").elements[1].value;
+  document.getElementById("demo").innerHTML = y;
+  var z = document.getElementById("myForm").elements[2].value;
+  document.getElementById("demo").innerHTML = z;
+  var w = document.getElementById("myForm").elements[3].value;
+  document.getElementById("demo").innerHTML = w;
+  var t = document.getElementById("myForm").elements[4].value;
+  document.getElementById("demo").innerHTML = t;
+  var u = document.getElementById("myForm").elements[5].value;
+  document.getElementById("demo").innerHTML = u;
+
+  console.log(window.value);
+  console.log(y);
+  console.log(z);
+  console.log(w);
+  console.log(t);
+  console.log(u);
+}
+</script>
+</center>
+</div>
+
+
+<div id="Modbus RTU Write" class="tabcontent">
+  <center>
+  <h3>Modbus RTU Write Properties</h3>
+  <form action="modbus2.php" method="POST" enctype="multipart/form-data" id = "myForm2">
+  <br>
+  <label><b>Unit - ID:</b></label>
+  <label><input type="text" name="UnitID" placeholder="Enter ID of Device"></label>
+  <br>
+  <br>
+  <br>
+  <b>Address:</b>
+  <input type="text" name="Address"  placeholder="Enter Register Address">
+  <br>
+  <br>
+  <br>
+  <b>Quantity:</b>
+  <input type="text" name="Quantity"  placeholder="Enter No: of Registers">
+  <br>
+  <br>
+  <br>
+<!--  <b>FunCode:</b> -->
+<!--  <input type="text" name="FunctionCode"  placeholder="Enter Function Code"> -->
+  <label for="FunCode"><b>Function Code:</b></label>
+  <select name="FC">
+  <option value="Select">Choose FC</option>
+  <option value="5"><b>FC5: Force Single Coil</b></option>
+  <option value="6"><b>FC6: Preset Single Register</b></option>
+  </select>
+  <br>
+  <br>
+  <br>
+<button type="Submit" button id="run_modbustwo" name="Connect">SUBMIT</button>
+<p id="demoo"></p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$('#run_modbustwo').on('click', function() {
+    $.ajax({
+        url : 'modbus2.php'
+    }).done(function(data) {
+        console.log(data);
+        alert(data);
+    });
+});
+</script>
+</form>
+
+<script>
+function myFunc() {
+  var x = document.getElementById("myForm2").elements[0].value;
+  window.value = x;
+  document.getElementById("demoo").innerHTML = x;
+  var y = document.getElementById("myForm2").elements[1].value;
+  document.getElementById("demoo").innerHTML = y;
+  var z = document.getElementById("myForm2").elements[2].value;
+  document.getElementById("demoo").innerHTML = z;
+  var w = document.getElementById("myForm2").elements[3].value;
+  document.getElementById("demoo").innerHTML = w;
+  var t = document.getElementById("myForm2").elements[4].value;
+  document.getElementById("demoo").innerHTML = t;
+  var u = document.getElementById("myForm2").elements[5].value;
+  document.getElementById("demoo").innerHTML = u;
+  console.log(window.value);
+  console.log(y);
+  console.log(z);
+  console.log(w);
+  console.log(t);
+  console.log(u);
+}
+</script>
+
+</center>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</script>
+
+</body>
+</html>

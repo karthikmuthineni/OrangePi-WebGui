@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+button:hover {
+  opacity: 0.8;
+}form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 5;
+  display: inline-block;
+  border: 2px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 5;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+</style>
+
+<p><font size="5"><b><font color="orange">O</font>range Pi<sub><font size="2"> <i>Web GUI</i></font></sub></b></font></p>
+
+<form name="loginForm" method="post" action="login.php">
+<table width="25%" align="center">
+
+<tr>
+<td colspan=2><center><font size=4><b>Login Page</b></font></center></td>
+</tr>
+<div class = "container">
+<tr>
+<td>Username:</td>
+<td><input type="text" size=5 name="userid"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="Password" size=10 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><button type= "Reset" input type="Reset">RESET</td>
+<td><button type="submit" input type="submit" onclick="return check(this.form)" value="Login">LOGIN</td>
+
+</tr>
+</div>
+</table>
+</form>
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "admin" && form.pwd.value == "12345")
+{
+        window.location = "navigation.html";
+	return false;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+<div style="position: relative">
+<p style="position: fixed; bottom: 0; width:100%; text-align: center"> Designed by: NECTEC </p>
+</div>
+
+</body>
+</html>

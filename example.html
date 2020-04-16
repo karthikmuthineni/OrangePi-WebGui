@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ 
+<head>
+<meta charset="utf-8">
+<title>Server Time</title>
+<link href="http://bit.ly/GPvP5H" rel="stylesheet" type="text/css">
+</head>
+ 
+<body>
+ 
+<h1>Server Time</h1>
+<div id="mainContent">
+<p id="time">?</p>
+<button id="clickButton" class="buttonStyle">
+show time</button>
+</div>
+ 
+<script>
+ 
+var myButton = document.getElementById("clickButton");
+var myText = document.getElementById("time");
+ 
+myButton.addEventListener('click', getServerTime, false)
+ 
+function getServerTime() {
+var request = new XMLHttpRequest();
+var url = "servertime.php";
+request.open("POST", url, true);
+request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ 
+request.onreadystatechange = function() {
+if(request.readyState == 4 && request.status == 200) {
+showTime(request.responseText);
+}
+}
+request.send();
+}
+ 
+function showTime(response) {
+var time = JSON.parse(response);
+ 
+myText.textContent = time;
+}
+ 
+ 
+ 
+</script>
+ 
+</body>
+</html>

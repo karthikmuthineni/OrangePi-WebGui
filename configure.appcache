@@ -1,0 +1,67 @@
+CACHE MANIFEST
+# 2019-02-02 19:48:57 WARNING: These files will never be delivered again 
+# until this file changes. If you are updating, make sure you change 
+# something in this file. The appcache isn't always good: 
+# https://alistapart.com/article/application-cache-is-a-douchebag 
+# Resources that will be delivered from the CACHE after first load.
+CACHE:
+# Required files
+store.php
+node-wifi/bin/require.js
+node-wifi/bin/load.js
+node_modules/modbus-tcp/package.json 
+node_modules/modbus-tcp/sampleServer.js
+node_modules/modbus-tcp/lib/FunctionCodes.js
+node_modules/modbus-tcp/lib/Modbus.js
+node_modules/modbus-tcp/lib/ExceptionCodes.js
+node_modules/modbus-tcp/lib/Functions.js
+node_modules/modbus-tcp/lib/Client/Client.js
+node_modules/modbus-tcp/lib/Client/ReadStream.js
+node_modules/modbus-tcp/lib/Client/WriteStream.js
+node_modules/modbus-tcp/lib/Server/Server.js
+node_modules/modbus-tcp/lib/Server/ReadStream.js
+node_modules/modbus-tcp/lib/Server/WriteStream.js
+node_modules/modbus-tcp/lib/protocol/READ_COILS.js
+node_modules/modbus-tcp/lib/protocol/READ_INPUT_REGISTERS.js
+node_modules/modbus-tcp/lib/protocol/WRITE_MULTIPLE_REGISTERS.js
+node_modules/modbus-tcp/lib/protocol/READ_DISCRETE_INPUTS.js
+node_modules/modbus-tcp/lib/protocol/tools.js
+node_modules/modbus-tcp/lib/protocol/WRITE_SINGLE_COIL.js
+node_modules/modbus-tcp/lib/protocol/READ_HOLDING_REGISTERS.js
+node_modules/modbus-tcp/lib/protocol/WRITE_MULTIPLE_COILS.js
+node_modules/modbus-tcp/lib/protocol/WRITE_SINGLE_REGISTER.js
+node_modules/node-wifi/src/env.js
+node_modules/node-wifi/src/mac-delete.js
+node_modules/node-wifi/src/linux-connect.js
+node_modules/node-wifi/src/mac-scan.js
+node_modules/node-wifi/src/linux-current-connections.js
+node_modules/node-wifi/src/network-utils.js
+node_modules/node-wifi/src/linux-delete.js
+node_modules/node-wifi/src/wifi.js
+node_modules/node-wifi/src/linux-disconnect.js
+node_modules/node-wifi/src/windows-connect.js
+node_modules/node-wifi/src/linux-scan.js
+node_modules/node-wifi/src/windows-current-connections.js
+node_modules/node-wifi/src/mac-connect.js
+node_modules/node-wifi/src/windows-disconnect.js
+node_modules/node-wifi/src/mac-current-connections.js
+node_modules/node-wifi/src/windows-scan.js
+node_modules/node-wifi/commitlint.config.js
+node_modules/node-wifi/package.json
+#/uibuilder/socket.io/socket.io.js 
+# Replace this with the non .min version if needed 
+#uibuilderfe.min.js 
+# Specific for our app 
+login.css navigation.css site.css foundation.css foundation.min.css 
+jquery.minicolors.css normalize.css stylee.css store.php 
+# Local vendor libraries 
+#vendor/normalize.css/normalize.css 
+#Useful utility libraries 
+#https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js 
+#https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js 
+# Resources that require the user to be online. NETWORK: * 
+# Optional section specifying fallback pages if a resource is 
+#inaccessible 1st URI is resource, 2nd is fallback if request fails or 
+#errors Both must from same origin as manifest. Can use prefixes as well 
+#as file uris FALLBACK: node_modules/modbus-tcp/lib/protocol/tools.js# e.g. display offline.html if cache is empty and we are offline 
+#offline.html 

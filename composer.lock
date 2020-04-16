@@ -1,0 +1,445 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "af74b3e10449728c01200ed3a438034b",
+    "packages": [
+        {
+            "name": "aldas/modbus-tcp-client",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aldas/modbus-tcp-client.git",
+                "reference": "3d0076e644a689cc3eedd34ccb9d3c09f118dfeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aldas/modbus-tcp-client/zipball/3d0076e644a689cc3eedd34ccb9d3c09f118dfeb",
+                "reference": "3d0076e644a689cc3eedd34ccb9d3c09f118dfeb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0",
+                "psr/log": "^1.0",
+                "react/child-process": "^0.5.2",
+                "react/datagram": "^1.4",
+                "react/socket": "^0.8"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware with BinaryStreamConnection"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ModbusTcpClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Modbus TCP protocol client library",
+            "keywords": [
+                "modbus"
+            ],
+            "time": "2019-09-17T21:14:42+00:00"
+        },
+        {
+            "name": "phplucidframe/console-table",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phplucidframe/console-table.git",
+                "reference": "a973d911af96f3db42fca92cbeb1f473c9ad505e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phplucidframe/console-table/zipball/a973d911af96f3db42fca92cbeb1f473c9ad505e",
+                "reference": "a973d911af96f3db42fca92cbeb1f473c9ad505e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LucidFrame\\": "src/",
+                    "LucidFrameTest\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sithu K.",
+                    "email": "cithukyaw@gmail.com"
+                }
+            ],
+            "description": "Console Table",
+            "time": "2019-03-03T12:17:32+00:00"
+        },
+        {
+            "name": "sanchescom/php-wifi",
+            "version": "0.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sanchescom/php-wifi.git",
+                "reference": "e2217c8abad97a80943732040cb8bf48d8297251"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sanchescom/php-wifi/zipball/e2217c8abad97a80943732040cb8bf48d8297251",
+                "reference": "e2217c8abad97a80943732040cb8bf48d8297251",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.8",
+                "phplucidframe/console-table": "^1.2",
+                "splitbrain/php-cli": "^1.1",
+                "tightenco/collect": "^5.8"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpstan/phpstan": "^0.11.5",
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "bin": [
+                "bin/wifi"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Helpers/array.php",
+                    "src/Helpers/string.php",
+                    "src/Helpers/calculate.php"
+                ],
+                "psr-4": {
+                    "Sanchescom\\WiFi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Efimov",
+                    "email": "sanches.com@mail.ru"
+                }
+            ],
+            "description": "PHP library for working with wifi network",
+            "time": "2019-09-16T06:30:31+00:00"
+        },
+        {
+            "name": "splitbrain/php-cli",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitbrain/php-cli.git",
+                "reference": "b7be3726872547253dd0bd61098fa9f634c33555"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitbrain/php-cli/zipball/b7be3726872547253dd0bd61098fa9f634c33555",
+                "reference": "b7be3726872547253dd0bd61098fa9f634c33555",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.*"
+            },
+            "suggest": {
+                "psr/log": "Allows you to make the CLI available as PSR-3 logger"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "splitbrain\\phpcli\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Gohr",
+                    "email": "andi@splitbrain.org"
+                }
+            ],
+            "description": "Easy command line scripts for PHP with opt parsing and color output. No dependencies",
+            "keywords": [
+                "argparse",
+                "cli",
+                "command line",
+                "console",
+                "getopt",
+                "optparse",
+                "terminal"
+            ],
+            "time": "2019-10-16T07:31:14+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-11-27T14:18:11+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/66fea50f6cb37a35eea048d75a7d99a45b586038",
+                "reference": "66fea50f6cb37a35eea048d75a7d99a45b586038",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-11-27T13:56:44+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v4.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "7cfa470bc3b1887a7b2a47c0a702a84ad614fa92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/7cfa470bc3b1887a7b2a47c0a702a84ad614fa92",
+                "reference": "7cfa470bc3b1887a7b2a47c0a702a84ad614fa92",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "^3.4|^4.0|^5.0",
+                "symfony/process": "^4.4|^5.0",
+                "twig/twig": "^1.34|^2.4|^3.0"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2020-01-04T13:00:46+00:00"
+        },
+        {
+            "name": "tightenco/collect",
+            "version": "v5.8.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tightenco/collect.git",
+                "reference": "c93a7039e6207ad533a09109838fe80933fcc72c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/c93a7039e6207ad533a09109838fe80933fcc72c",
+                "reference": "c93a7039e6207ad533a09109838fe80933fcc72c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/var-dumper": ">=3.4 <5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "nesbot/carbon": "^1.26.3",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Collect/Support/helpers.php",
+                    "src/Collect/Support/alias.php"
+                ],
+                "psr-4": {
+                    "Tightenco\\Collect\\": "src/Collect"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "Collect - Illuminate Collections as a separate package.",
+            "keywords": [
+                "collection",
+                "laravel"
+            ],
+            "time": "2019-09-17T18:57:01+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

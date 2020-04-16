@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Wlan Page</title>
+<link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+<div class="navbar">
+  <a href="navigation.html">Home</a>
+  <a href="Wlan.html">Wlan</a>
+  <a href="Modbus.html">Modbus RTU</a>
+  <a href="Modbustcp.html">Modbus TCP</a>
+  <a href="Mqtt.html">MQTT</a>
+  <a href="http://192.168.1.101:1880/ui/#!/1?socketid=FdRMZE5DvYJiiiRWAAAF">I/O Status</a>
+  <a href="Logout.html">Logout</a>
+</div>
+
+<div class="main">
+  <p>..</p>
+</div>
+
+<div style="position: relative">
+<p style="position: fixed; bottom: 0; width:100%; text-align: center"> Designed by: NECTEC </p>
+</div>
+
+<body>
+    
+<link href="site.css" rel="stylesheet">
+<h1>Welcome to Wireless LAN Setup Page</h1>
+<h3><b><center>Client Settings</center></b></h3>       
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+button:hover {
+  opacity: 0.8;
+}form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 10px 5;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 5;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+</style>
+
+
+
+<div class="container">
+<div align="center">
+<form action="store.php" method="POST" enctype="multipart/form-data">
+<input type="text" name="SSID" placeholder="Enter your SSID">
+<input type="password" name="password" placeholder="Enter your password">
+<button type="Submit" button id="run_connect" name="Connect">CONNECT</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><$
+<script>
+$('#run_connect').on('click', function() {
+    $.ajax({
+        url : 'store.php'
+    }).done(function(data) {
+        console.log(data);
+        alert(data);
+    });
+});
+</script>
+
+</form>
+</div>
+</div>
+
+<center>
+<button id="run_system">SCAN WIFI</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$('#run_system').on('click', function() {
+    $.ajax({
+        url : 'scan.php'
+    }).done(function(data) {
+        console.log(data);
+        alert(data);
+    });
+});
+</script>
+</center>
+
+</body>
+</html>
